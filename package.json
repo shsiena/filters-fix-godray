@@ -1,6 +1,6 @@
 {
-  "name": "pixi-filters",
-  "version": "6.1.2",
+  "name": "pixi-filters-godray-patch",
+  "version": "1.0.0",
   "sideEffects": false,
   "exports": {
     ".": {
