@@ -58,8 +58,7 @@ fn mainFragment(
   var noise: f32 = turb(dir + vec3<f32>(uTime, 0.0, 62.1 + uTime) * 0.05, vec3<f32>(480.0, 320.0, 480.0), lacunarity, gain);
   noise = mix(noise, 0.0, 0.3);
   //fade vertically.
-  var mist: vec4<f32> = vec4<f32>(vec3<f32>(noise), 1.0) * (1.0 - coord.y);
-  mist.a = 1.0;
+  var mist: vec4<f32> = vec4<f32>(vec3<f32>(noise), noise) * (1.0 - coord.y);
   // apply user alpha
   mist *= alpha;
   return textureSample(uTexture, uSampler, uv) + mist;
